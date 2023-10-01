@@ -23,6 +23,7 @@ const lista = document.querySelector('#listaAlumnos')
 
 // Variables usadas para eventos
 const mostrar = document.querySelector('#alumnosRegistrados')
+const borrarCampos = document.querySelector('#borrarCampos')
 
 
 // Storage
@@ -51,7 +52,6 @@ form.addEventListener('submit', evento => {
 
         const alumno = new Alumno(nombre.value, apellido.value, promedio)
         arrayAlumnos.push(alumno)
-        arrayAlumnosCopia.push(alumno)
         localStorage.setItem('arrayAlumnos', JSON.stringify(arrayAlumnos))
 
         Swal.fire(
@@ -64,12 +64,22 @@ form.addEventListener('submit', evento => {
     nombre.value = ''
     apellido.value = ''
     trim1.value = ''
-    trim2.value = ''   
-    trim3.value = ''   
+    trim2.value = ''
+    trim3.value = ''
 })
 
 mostrar.addEventListener('click', evento => {
     evento.preventDefault()
-
+    
     mostrarAlumnos(arrayAlumnos)
+})
+
+borrarCampos.addEventListener('click', evento => {
+    evento.preventDefault()
+
+    nombre.value = ''
+    apellido.value = ''
+    trim1.value = ''
+    trim2.value = ''
+    trim3.value = ''
 })
