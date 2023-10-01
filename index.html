@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style/style.css">
+    <title>Proyecto Final | Castagna Emiliano</title>
+</head>
+
+<body>
+    <form id="formulario">
+        <label for="inputNombre">Nombre</label><input id="inputNombre" type="text" required>
+        <label for="inputApellido">Apellido</label><input id="inputApellido" type="text" required>
+        <div class="form__label__container">
+            <label for="inputTuno">Primer trimestre</label><input id="inputTuno" type="number" min="1" max="10" required>
+            <label for="inputTdos">Segundo trimestre</label><input id="inputTdos" type="number" min="1" max="10" required>
+            <label for="inputTtres">Tercer trimestre</label><input id="inputTtres" type="number" min="1" max="10" required>
+        </div>
+        <input type="submit" value="Agregar alumno">
+    </form>
+    <input type="button" value="Mostrar alumnos registrados" id="alumnosRegistrados">
+
+
+    <h3>Alumnos registrados</h3>
+    <ul id="listaAlumnos">
+        <!-- Contenido generado en DOM -->
+        
+    </ul>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script/index.js"></script>
+</html>
